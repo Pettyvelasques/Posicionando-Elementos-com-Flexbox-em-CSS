@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Align Content</title>
+
+    <style>
+        .container {
+            height: 350px;
+            max-width: 300px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            border: 2px solid black;
+        }
+
+        .item {
+            background-color: orangered;
+            padding: 0 5px;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            flex: 1;
+        }
+
+        .stretch{align-content: stretch;}
+        .center{align-content: center;}
+        .start{align-content: flex-start;}
+        .end{align-content: flex-end;}
+        .between{align-content: space-between;}
+        .around{align-content: space-around;}
+
+
+    </style>
+</head>
+
+<body>
+    <p>Stretch</p>
+    <div class="container stretch">
+        <div class="item">Lorem ipsum is therefore always free from.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+        <div class="item">Lorem ipsum is always free.</div>
+        <div class="item">Lorem ipsum is therefore always free from repetition, non-characteristic words etc.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+    </div>
+
+    <p>Center</p>
+    <div class="container center">
+        <div class="item">Lorem ipsum is therefore always free from.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+        <div class="item">Lorem ipsum is always free.</div>
+        <div class="item">Lorem ipsum is therefore always free from repetition, non-characteristic.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+    </div>
+    
+    <p>Flex-Start</p>
+    <div class="container start">
+        <div class="item">Lorem ipsum is therefore always free from.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+        <div class="item">Lorem ipsum is always free.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+    </div>
+    
+    <p>Flex-End</p>
+    <div class="container end">
+        <div class="item">Lorem ipsum is therefore always free from.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+        <div class="item">Lorem ipsum is always free.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+    </div>
+    
+    <p>Space-Around</p>
+    <div class="container around">
+        <div class="item">Lorem ipsum is therefore always free from.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+        <div class="item">Lorem ipsum is always free.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+    </div>
+    
+    <p>Space-Between</p>
+    <div class="container between">
+        <div class="item">Lorem ipsum is therefore always free from.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+        <div class="item">Lorem ipsum is always free.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+        <div class="item">Lorem ipsum is therefore.</div>
+    </div>
+</body>
+
+</html>

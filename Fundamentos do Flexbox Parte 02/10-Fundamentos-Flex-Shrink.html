@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Flex Shrink</title>
+
+    <style>
+        .flex-container {
+            max-width: 350px;
+            display: flex;
+            border: 2px solid black;
+            margin-bottom: 20px;
+        }
+
+        .item {
+            background-color: orangered;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .s-0{flex-shrink: 0;}
+        .s-1{flex-shrink: 1;}
+        .s-2{flex-shrink: 1;}
+        .s-3{flex-shrink: 3;}
+
+        .b-100{flex-basis: 100px;}
+        .b-200{flex-basis: 200px;}
+
+        .fg-1{flex-grow: 1;}
+
+    </style>
+</head>
+
+<body>
+    <p>Flex-Shrink 1</p>
+    <div class="flex-container">
+        <div class="item s-1 fg-1">A</div>
+        <div class="item s-1 fg-1">B</div>
+        <div class="item s-1 fg-1">C</div>
+        <div class="item s-1 fg-1">D</div>
+        <div class="item s-1 fg-1">E</div>
+    </div>
+
+    <div class="flex-container">
+        <div class="item s-1 fg-1">A</div>
+        <div class="item s-1 fg-1">The Generated</div>
+        <div class="item s-1 fg-1">C</div>
+        <div class="item s-1 fg-1">D</div>
+    </div>
+
+    <p>Flex-Shrink 0 / Flex-Basis 200px</p>
+    <div class="flex-container">
+        <div class="item s-0 b-200 fg-1">A</div>
+        <div class="item s-0 b-200 fg-1">The Generated</div>
+        <div class="item s-0 b-200 fg-1">C Generated</div>
+        <div class="item s-0 b-200 fg-1">D Generated</div>
+        <div class="item s-0 b-200 fg-1">E</div>
+    </div>
+
+    <p>Flex-Shrink Mix / Flex-Basis 100px</p>
+    <div class="flex-container">
+        <div class="item s-1 fg-1">A</div>
+        <div class="item s-2 b-100 fg-1">The Generated</div>
+        <div class="item s-2 b-100 fg-1">C</div>
+        <div class="item s-3 b-100 fg-1">D</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Order</title>
+
+    <style>
+        .flex-container {
+            max-width: 350px;
+            display: flex;
+            border: 2px solid black;
+            margin-bottom: 20px;
+        }
+
+        .item {
+            background-color: brown;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            flex: 1;
+        }
+
+
+        .o1 {
+            order: 1;
+        }
+
+        .o2 {
+            order: 2;
+        }
+
+        .o3 {
+            order: 3;
+        }
+
+        .o4 {
+            order: -4;
+        }
+
+        .direction {
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Row</h1>
+    <p>Flex Order 0</p>
+    <div class="flex-container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">D2</div>
+        <div class="item">D3</div>
+    </div>
+
+    <p>Flex Order Mix</p>
+    <div class="flex-container">
+        <div class="item o3">A</div>
+        <div class="item o2">B</div>
+        <div class="item o3">C</div>
+        <div class="item o1">D</div>
+    </div>
+
+    <h1>Column</h1>
+    <p>Flex Order 0</p>
+    <div class="flex-container direction">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">D2</div>
+        <div class="item">D3</div>
+    </div>
+
+    <p>Flex Order Mix</p>
+    <div class="flex-container direction">
+        <div class="item o3">H</div>
+        <div class="item o1">L</div>
+        <div class="item o3">A</div>
+        <div class="item o2">B</div>
+        <div class="item o3">C</div>
+        <div class="item o1">D</div>
+    </div>
+
+
+</body>
+
+</html>
